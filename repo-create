@@ -30,7 +30,7 @@ return 1
 fi
 
 echo -n "Creating Github repository '$repo_name' ..."
-curl -u "$username:$token" https://api.github.com/user/repos -d '{"name":"'$repo_name'"}' > /dev/null 
+curl --insecure -u "$username:$token" https://api.github.com/user/repos -d '{"name":"'$repo_name'"}' > /dev/null 
 echo " done."
 
 #echo -n "Pushing local code to remote ..."
